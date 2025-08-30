@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nagendra80/backend:{{ .Values.deployment.version }}
+        image: "{{ .Values.deployment.imageURL }:{{ .Values.deployment.version }}"
         envFrom:
         - configMapRef:
             name: backend
