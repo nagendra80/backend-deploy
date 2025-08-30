@@ -13,7 +13,7 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
     }
     parameters{
-        string(name: 'version', defaultValue: 'Mr Jenkins', description: 'Enter the application version')
+        string(name: 'version', description: 'Enter the application version')
         choice(name: 'deploy_to', choices: ['dev', 'qa', 'prod'], description: 'Pick something')
     }
     stages {
